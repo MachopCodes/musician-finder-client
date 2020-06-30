@@ -8,4 +8,11 @@
 
 $(() => {
   // your JS code goes here
+    $('.auth').hide()
+    $('#sign-in').on('submit', events.onSignIn)
+    $('#sign-up').on('submit', events.onSignUp)
+    $('#index-profiles').on('click', events.onIndexProfiles)
+    $('#create-profile').on('click', events.onCreateProfile)
+    $('#change-password').on('submit', events.onChangePassword)
+    $('#sign-out').on('click', events.onSignOut)
 })
