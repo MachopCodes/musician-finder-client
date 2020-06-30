@@ -1,4 +1,6 @@
-const store = require('./store')
+'use strict'
+
+const store = require('./../store')
 const events = require('./events')
 
 
@@ -22,10 +24,8 @@ const changeSuccess = function() {
 const signOutSuccess = function() {
   $('#message').text(`see you later!`)
   $('form').trigger('reset')
-  $('.auth').hide()
-  $('.unauth').show()
 }
-const failure = function(response) {
+const authFailure = function(response) {
   console.log(response)
   $('#message').text('Failure')
   $('form').trigger('reset')
@@ -36,5 +36,5 @@ module.exports = {
   signInSuccess,
   changeSuccess,
   signOutSuccess,
-  failure
+  authFailure
 }

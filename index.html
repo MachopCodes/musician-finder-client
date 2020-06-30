@@ -17,77 +17,63 @@
   <h1>Browser Template</h1>
   <p id="message"></p>
   <section class="auth">
-
-    <form id="sign-up">
+    <form id="sign-up-form">
       <button type="submit">Sign Up</button>
       <input required type="text" placeholder="user name" name="credentials[email]">
       <input required type="text" placeholder="password" name="credentials[password]">
       <input required type="text" placeholder="confirm password" name="credentials[password_confirmation]">
     </form>
-
-    <form id="sign-in">
+    <form id="sign-in-form">
       <button type="submit">Sign In</button>
       <input required type="text" placeholder="user name" name="credentials[email]">
       <input required type="text" placeholder="password" name="credentials[password]">
     </form>
-
-    <form id="change-password">
+    <form id="change-password-form">
       <button type="submit">change password</button>
       <input required type="text" placeholder="old password" name="passwords[old]">
       <input required type="text" placeholder="new password" name="passwords[new]">
     </form>
-
-    <form id="sign-out">
-      <button type="click">Sign Out</button>
-    </form>
-
+    <button id="sign-out-button" type="click">Sign Out</button>
   </section>
 
   <section class="profiles">
-
-    <form id="show-profiles">
-      <button type="submit">show profiles</button>
-    </form>
-
-    <form id="create-profile">
-      <button type="submit">create profile</button>
-    </form>
-
-    <form id="update-profile">
-      <button type="submit">update-profile</button>
+    <form id="create-profile-form">
       <input required type="text" placeholder="state" name="state">
       <input required type="text" placeholder="city" name="city">
       <input required type="text" placeholder="zip code" name="zipCode">
       <input required type="text" placeholder="instruments" name="instruments">
       <input required type="text" placeholder="interests" name="interests">
       <input required type="text" placeholder="blurb" name="blurb">
+      <button type="submit">update-profile</button>
     </form>
-
-    <form id="delete-profile">
-      <button type="click">Delete Profile</button>
+    <button id="show-profiles-button" type="submit">show profiles</button>
+    <form id="update-profile-form">
+      <input required type="text" placeholder="state" name="state">
+      <input required type="text" placeholder="city" name="city">
+      <input required type="text" placeholder="zip code" name="zipCode">
+      <input required type="text" placeholder="instruments" name="instruments">
+      <input required type="text" placeholder="interests" name="interests">
+      <input required type="text" placeholder="blurb" name="blurb">
+      <button type="submit">update-profile</button>
     </form>
-
+    <button id="delete-profile-button" type="click">Delete Profile</button>
   </section>
 
   <section class="reviews">
-
-    <form id="create-review">
+    <form id="create-review-form">
+      <input required type="text" placeholder="title" name="title">
+      <input required type="text" placeholder="content" name="content">
+      <button type="submit">write-review</button>
+    </form>
+    <form id="update-review-form">
       <button type="submit">write-review</button>
       <input required type="text" placeholder="title" name="title">
       <input required type="text" placeholder="content" name="content">
     </form>
+    <button id="delete-review-button" type="submit">delete-review</button>
+  </section>
 
-    <form id="update-review">
-      <button type="submit">write-review</button>
-      <input required type="text" placeholder="title" name="title">
-      <input required type="text" placeholder="content" name="content">
-    </form>
-
-    <form id="delete-review">
-      <button type="submit">delete-review</button>
-    </form>
-
-    <div id="content" class="content"></div>
+  <div id="content" class="content"></div>
 </body>
 
 </html>
