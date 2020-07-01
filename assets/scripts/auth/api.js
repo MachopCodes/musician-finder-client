@@ -1,7 +1,7 @@
 'use strict'
 
-const config = require('./../config')
-const store = require('./../store')
+const config = require('../config')
+const store = require('../store')
 
 const addUser = function(data) {
   return $.ajax({
@@ -22,7 +22,7 @@ const userChangePass = (data) => {
     method: 'PATCH',
     url: config.apiUrl + '/change-password',
     headers: {
-      Authorization: 'Bearer=' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     },
     data
   })
@@ -32,7 +32,7 @@ const userSignOut = (data) => {
     method: 'DELETE',
     url: config.apiUrl + '/sign-out',
     headers: {
-      Authorization: 'Bearer=' + store.user.token
+      Authorization: 'Token token=' + store.user.token
     }
   })
 }

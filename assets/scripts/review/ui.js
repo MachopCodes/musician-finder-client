@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('./../store')
+const store = require('../store')
 const events = require('./events')
 
 const createReviewSuccess = function(respose) {

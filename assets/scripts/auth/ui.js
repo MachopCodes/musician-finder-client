@@ -1,6 +1,6 @@
 'use strict'
 
-const store = require('./../store')
+const store = require('../store')
 const events = require('./events')
 
 
@@ -14,8 +14,6 @@ const signInSuccess = function(response) {
   $('#message').text(`Welcome ${response.user.email}!!`)
   store.user = response.user
   $('form').trigger('reset')
-  $('.auth').show()
-  $('.unauth').hide()
 }
 const changeSuccess = function() {
   $('#message').text('password changed!')

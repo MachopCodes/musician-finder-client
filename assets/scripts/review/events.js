@@ -1,7 +1,7 @@
-const getFormFields = require('./../../lib/get-form-fields')
+const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
-const store = require('./../store')
+const store = require('../store')
 
 const onCreateReview = function(form) {
   event.preventDefault()
@@ -24,9 +24,15 @@ const onDeleteReview = function(event) {
     .then(ui.deleteReviewSuccess)
     .catch(ui.reviewFailure)
 }
+const addHandlers = () => {
+  $('#create-review-form').on('submit', onCreateReview)
+  $('#update-review-form').on('submit', onUpdateReview)
+  $('#delete-review-button').on('cick', onDeleteReview)
+}
 
 module.exports={
   onCreateReview,
   onUpdateReview,
-  onDeleteReview
+  onDeleteReview,
+  addHandlers
 }

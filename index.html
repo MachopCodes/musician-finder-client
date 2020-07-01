@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <h1>Browser Template</h1>
+  <h1>profile Finder</h1>
   <p id="message"></p>
   <section class="auth">
     <form id="sign-up-form">
@@ -38,13 +38,13 @@
 
   <section class="profiles">
     <form id="create-profile-form">
-      <input required type="text" placeholder="state" name="state">
-      <input required type="text" placeholder="city" name="city">
-      <input required type="text" placeholder="zip code" name="zipCode">
-      <input required type="text" placeholder="instruments" name="instruments">
-      <input required type="text" placeholder="interests" name="interests">
-      <input required type="text" placeholder="blurb" name="blurb">
-      <button type="submit">update-profile</button>
+      <input required type="text" placeholder="state" name="profile[state]">
+      <input required type="text" placeholder="city" name="profile[city]">
+      <input required type="text" placeholder="zip code" name="profile[zipCode]">
+      <input required type="text" placeholder="instruments" name="profile[instruments]">
+      <input required type="text" placeholder="interests" name="profile[interests]">
+      <input required type="text" placeholder="blurb" name="profile[blurb]">
+      <button type="submit">create-profile</button>
     </form>
     <button id="show-profiles-button" type="submit">show profiles</button>
     <form id="update-profile-form">
