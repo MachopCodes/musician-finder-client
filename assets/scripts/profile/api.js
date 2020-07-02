@@ -1,5 +1,5 @@
 'use strict'
-
+// one small change
 const config = require('../config')
 const store = require('../store')
 
