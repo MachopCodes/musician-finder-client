@@ -1,1 +1,1 @@
-This is the client facing application for profile-finder
+MusicMan is a networking application for the music community. Whether you're looking for clients to teach music lessons, find people to play music with, or finding a restaurant to play music at, this app is a launchpad to help you get your name out there. 

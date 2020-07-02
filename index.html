@@ -42,28 +42,37 @@
   </nav>
   <p id="message"></p>
   <div class="auth profile-buttons">
-    <button id="show-profiles-button" class="btn btn-primary">
+    <button id="show-profiles-button" class="btn btn-info">
       show profiles</button>
+    <br>
     <button id="clear-profiles-button" class="btn btn-outline-info">
       clear profiles</button>
-    <button id="show-create-profiles-button" class="auth btn btn-primary">
+    <button id="show-create-profiles-button" class="auth btn btn-info">
       create profile</button>
   </div>
 
   <form id="create-profile-form" class="auth container">
     <fieldset>
-      <input required type="text" placeholder="state" name="profile[state]">
-      <input required type="text" placeholder="city" name="profile[city]">
-      <input required type="text" placeholder="zip code" name="profile[zipCode]">
-      <input required type="text" placeholder="instruments" name="profile[instruments]">
-      <select name="profile[interests]">
-        <option value="Lessons">Lessons</option>
-        <option value="Gigs">Gigs</option>
-        <option value="Jams">Jams</option>
-      </select>
-      <input required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
-      <button type="submit" class="btn btn-success">
-        create profile</button>
+      <div class="row">
+        <input required type="text" placeholder="name" name="profile[name]">
+        <input required type="text" placeholder="contact" name="profile[contact]">
+        <input required type="text" placeholder="location" name="profile[location]">
+      </div>
+      <div class="row">
+        <input class="col" required type="text" placeholder="instruments" name="profile[instruments]">
+        <select name="profile[interests]">
+          <option value="Lessons">Lessons</option>
+          <option value="Gigs">Gigs</option>
+          <option value="Jams">Jams</option>
+        </select>
+      </div class="row">
+      <div class="row">
+        <input style="height:200px; font-size: 14pt;" class="col" required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
+      </div class="row">
+      <div class="row">
+        <button type="submit" class="col btn btn-success">
+          create profile</button>
+      </div class="row">
     </fieldset>
   </form>
 

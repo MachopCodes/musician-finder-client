@@ -27,7 +27,6 @@ const signUpSuccess = function(response) {
 }
 const signInSuccess = function(response) {
   console.log(response)
-  $('#message').text(`${response.user.email} owner id: ${response.user._id}`)
   store.user = response.user
   $('form').trigger('reset')
   $('#display-show-profiles-button').show()
@@ -43,7 +42,6 @@ const changeSuccess = function() {
   $('form').trigger('reset')
 }
 const signOutSuccess = function() {
-  $('#message').text(`see you later!`)
   $('form').trigger('reset')
   $('.auth').hide()
   $('.unauth-show').show()
