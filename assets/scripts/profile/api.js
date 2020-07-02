@@ -17,10 +17,7 @@ const showProfiles = function (data) {
   return $.ajax({
     url: config.apiUrl + '/profiles',
     method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token,
-    },
-    data
+    headers: {Authorization: 'Bearer ' + store.user.token}
   })
 }
 const updateProfile = function (data, id) {

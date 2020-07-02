@@ -8,9 +8,7 @@ const store = require('../store')
 const onCreateProfile = function(event) {
   event.preventDefault()
   let data = getFormFields(event.target)
-  console.log("this is store.user inside events.js")
   console.log(store.user)
-  console.log("this is the form data inside events.js")
   console.log(data)
   api.createProfile(data)
     .then(ui.createProfileSuccess)
@@ -18,8 +16,7 @@ const onCreateProfile = function(event) {
 }
 const onShowProfiles = function(event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  api.showProfiles(data)
+  api.showProfiles()
     .then(ui.showProfileSuccess)
     .catch(ui.profileFailure)
 }
@@ -37,9 +34,9 @@ const onUpdateProfile = function(event) {
 }
 const onDeleteProfile = function(event) {
   event.preventDefault()
+  console.log("this is event target in event \n", event.target)
   const id = $(event.target).attr('data-id')
   api.deleteProfile(id)
-    .then(console.log(id))
     .then(ui.deleteProfileSuccess)
     .catch(ui.profileFailure)
 }

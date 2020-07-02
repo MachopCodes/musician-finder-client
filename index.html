@@ -17,17 +17,21 @@
   <nav>
     <div class="app-name">MusicMan</div>
     <div class="nav-buttons">
-      <form id="sign-in-form" class="unauth">
+      <button id="show-sign-up-button" class="unauth-show btn btn-dark">sign-up</button>
+      <button id="show-sign-in-button" class="unauth-show btn btn-secondary">log-in</button>
+      <form id="sign-in-form" class="unauth sign-in-forms">
         <input class="sign-in-input" required type="text" placeholder="user name" name="credentials[email]">
         <input class="sign-in-input" required type="text" placeholder="password" name="credentials[password]">
         <button id="sign-in-button" class="btn btn-secondary" type="submit">Log In</button>
       </form>
-      <form id="sign-up-form" class="unauth">
-        <button id="sign-up-button" class="btn btn-dark" type="submit">Sign Up</button>
+      <form id="sign-up-form" class="unauth sign-in-forms">
         <input required type="text" placeholder="user name" name="credentials[email]">
         <input required type="text" placeholder="password" name="credentials[password]">
         <input required type="text" placeholder="confirm password" name="credentials[password_confirmation]">
+        <button id="sign-up-button" class="btn btn-success" type="submit">Sign Up</button>
       </form>
+      <button id="show-change-pass-button" class="auth btn btn-secondary">
+        change pass</button>
       <form id="change-password-form" class="auth">
         <input required type="text" placeholder="old password" name="passwords[old]">
         <input required type="text" placeholder="new password" name="passwords[new]">
@@ -42,6 +46,8 @@
       show profiles</button>
     <button id="clear-profiles-button" class="btn btn-outline-info">
       clear profiles</button>
+    <button id="show-create-profiles-button" class="auth btn btn-primary">
+      create profile</button>
   </div>
 
   <form id="create-profile-form" class="auth container">
@@ -57,7 +63,7 @@
       </select>
       <input required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
       <button type="submit" class="btn btn-success">
-        create-profile</button>
+        create profile</button>
     </fieldset>
   </form>
 

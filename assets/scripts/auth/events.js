@@ -5,6 +5,22 @@ const api = require('./api')
 const ui = require('./ui')
 const store = require('../store')
 
+const onShowSignUp = function(event) {
+  event.preventDefault()
+  ui.showSignUp(event)
+}
+const onShowSignIn = function(event) {
+  event.preventDefault(event)
+  ui.showSignIn(event)
+}
+const onShowChangePass = function(event) {
+  event.preventDefault()
+  ui.showChangePass()
+}
+const onShowCreateProfile = function(event) {
+  event.preventDefault()
+  ui.showCreateProfiles()
+}
 const onSignUp = function(form) {
   event.preventDefault()
   console.log(event)
@@ -39,6 +55,10 @@ const onSignOut = function(event) {
 }
 
 const addHandlers = () => {
+  $('#show-change-pass-button').on('click', onShowChangePass)
+  $('#show-sign-in-button').on('click', onShowSignIn)
+  $('#show-sign-up-button').on('click', onShowSignUp)
+  $('#show-create-profiles-button').on('click', onShowCreateProfile)
   $('#sign-in-form').on('submit', onSignIn)
   $('#sign-up-form').on('submit', onSignUp)
   $('#change-password-form').on('submit', onChangePassword)
