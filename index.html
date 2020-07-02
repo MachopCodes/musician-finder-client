@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Example</title>
+  <title>Music Man</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -14,66 +14,57 @@
 </head>
 
 <body>
-  <h1>profile Finder</h1>
+  <nav>
+    <div class="app-name">MusicMan</div>
+    <div class="nav-buttons">
+      <form id="sign-in-form" class="unauth">
+        <input class="sign-in-input" required type="text" placeholder="user name" name="credentials[email]">
+        <input class="sign-in-input" required type="text" placeholder="password" name="credentials[password]">
+        <button id="sign-in-button" class="btn btn-secondary" type="submit">Log In</button>
+      </form>
+      <form id="sign-up-form" class="unauth">
+        <button id="sign-up-button" class="btn btn-dark" type="submit">Sign Up</button>
+        <input required type="text" placeholder="user name" name="credentials[email]">
+        <input required type="text" placeholder="password" name="credentials[password]">
+        <input required type="text" placeholder="confirm password" name="credentials[password_confirmation]">
+      </form>
+      <form id="change-password-form" class="auth">
+        <input required type="text" placeholder="old password" name="passwords[old]">
+        <input required type="text" placeholder="new password" name="passwords[new]">
+        <button class="btn btn-secondary" type="submit">change pass</button>
+      </form>
+      <button id="sign-out-button" class="auth btn btn-dark">sign out</button>
+    </div>
+  </nav>
   <p id="message"></p>
-  <section class="auth">
-    <form id="sign-up-form">
-      <button type="submit">Sign Up</button>
-      <input required type="text" placeholder="user name" name="credentials[email]">
-      <input required type="text" placeholder="password" name="credentials[password]">
-      <input required type="text" placeholder="confirm password" name="credentials[password_confirmation]">
-    </form>
-    <form id="sign-in-form">
-      <button type="submit">Sign In</button>
-      <input required type="text" placeholder="user name" name="credentials[email]">
-      <input required type="text" placeholder="password" name="credentials[password]">
-    </form>
-    <form id="change-password-form">
-      <button type="submit">change password</button>
-      <input required type="text" placeholder="old password" name="passwords[old]">
-      <input required type="text" placeholder="new password" name="passwords[new]">
-    </form>
-    <button id="sign-out-button" type="click">Sign Out</button>
-  </section>
+  <div class="auth profile-buttons">
+    <button id="show-profiles-button" class="btn btn-primary">
+      show profiles</button>
+    <button id="clear-profiles-button" class="btn btn-outline-info">
+      clear profiles</button>
+  </div>
 
-  <section class="profiles">
-    <form id="create-profile-form">
+  <form id="create-profile-form" class="auth container">
+    <fieldset>
       <input required type="text" placeholder="state" name="profile[state]">
       <input required type="text" placeholder="city" name="profile[city]">
       <input required type="text" placeholder="zip code" name="profile[zipCode]">
       <input required type="text" placeholder="instruments" name="profile[instruments]">
-      <input required type="text" placeholder="interests" name="profile[interests]">
-      <input required type="text" placeholder="blurb" name="profile[blurb]">
-      <button type="submit">create-profile</button>
-    </form>
-    <button id="show-profiles-button" type="submit">show profiles</button>
-    <form id="update-profile-form">
-      <input required type="text" placeholder="state" name="state">
-      <input required type="text" placeholder="city" name="city">
-      <input required type="text" placeholder="zip code" name="zipCode">
-      <input required type="text" placeholder="instruments" name="instruments">
-      <input required type="text" placeholder="interests" name="interests">
-      <input required type="text" placeholder="blurb" name="blurb">
-      <button type="submit">update-profile</button>
-    </form>
-    <button id="delete-profile-button" type="click">Delete Profile</button>
-  </section>
+      <select name="profile[interests]">
+        <option value="Lessons">Lessons</option>
+        <option value="Gigs">Gigs</option>
+        <option value="Jams">Jams</option>
+      </select>
+      <input required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
+      <button type="submit" class="btn btn-success">
+        create-profile</button>
+    </fieldset>
+  </form>
 
-  <section class="reviews">
-    <form id="create-review-form">
-      <input required type="text" placeholder="title" name="title">
-      <input required type="text" placeholder="content" name="content">
-      <button type="submit">write-review</button>
-    </form>
-    <form id="update-review-form">
-      <button type="submit">write-review</button>
-      <input required type="text" placeholder="title" name="title">
-      <input required type="text" placeholder="content" name="content">
-    </form>
-    <button id="delete-review-button" type="submit">delete-review</button>
-  </section>
-
-  <div id="content" class="content"></div>
+  <br>
+  <main class="auth">
+    <div id="content" class="content"></div>
+  </main>
 </body>
 
 </html>

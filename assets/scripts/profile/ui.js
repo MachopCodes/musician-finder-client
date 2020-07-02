@@ -5,22 +5,33 @@ const events = require('./events')
 const showProfilesTemplate = require('../templates/profile-listing.handlebars')
 
 const createProfileSuccess = function(response) {
-console.log(response)
-console.log("profile created")
-$('form').trigger('reset')
+  console.log("profile created\n", response)
+  $('form').trigger('reset')
 }
 const showProfileSuccess = function(data) {
-console.log(data)
-const showProfilesHtml = showProfilesTemplate({ profiles: data.profiles})
-$('form').trigger('reset')
+  console.log(data)
+  const showProfilesHtml = showProfilesTemplate({ profiles: data.profiles})
+  $('.content').html(showProfilesHtml)
+  $('#clear-profiles-button').show()
+  $('#show-profiles-button').hide()
+  $('.update-profile-form').hide()
+}
+const clearProfiles = () => {
+  $('.content').empty()
+  $('#clear-profiles-button').hide()
+  $('#show-profiles-button').show()
+  $('.update-profile-form').hide()
+}
+const showUpdate = () => {
+  $('.show-update-button').hide()
+  $('.update-profile-form').show()
 }
 const updateProfileSuccess = function(response) {
-console.log(response)
+console.log("profile updated")
 $('form').trigger('reset')
 }
 const deleteProfileSuccess = function(response) {
-console.log(response)
-$('form').trigger('reset')
+  console.log("profile deleted\n", response)
 }
 const profileFailure = function(response) {
   console.log(response)
@@ -31,6 +42,8 @@ const profileFailure = function(response) {
 module.exports = {
   createProfileSuccess,
   showProfileSuccess,
+  clearProfiles,
+  showUpdate,
   updateProfileSuccess,
-  deleteProfileSuccess,
+  deleteProfileSuccess
 }

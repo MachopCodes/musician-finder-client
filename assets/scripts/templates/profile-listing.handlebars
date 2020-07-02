@@ -1,0 +1,52 @@
+<!-- for each function... books database (from Ajax) as a profile -->
+{{#each profiles as |profile|}}
+<!-- console.log each profile -->
+  {{log profile}}
+  <!-- declare a section... data-id (which is like an id that fits in a system) with profile id... (unique id) -->
+  <section data-id="{{profile._id}}">
+    <button type="submit" class="show-update-button btn btn-outline-success">
+      update-profile</button>
+    <form class="auth update-profile-form" data-id="{{profile._id}}">
+      <fieldset>
+        <button type="submit" class="btn btn-outline-success">
+          update-profile</button>
+        <input required type="text" placeholder="state" name="profile[state]">
+        <input required type="text" placeholder="city" name="profile[city]">
+        <input required type="text" placeholder="zip code" name="profile[zipCode]">
+        <input required type="text" placeholder="instruments" name="profile[instruments]">
+        <select name="profile[interests]">
+          <option value="Lessons">Lessons</option>
+          <option value="Gigs">Gigs</option>
+          <option value="Jams">Jams</option>
+        </select>
+        <input required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
+      </fieldset>
+    </form>
+    <h3>{{profile.city}},{{profile.state}},{{profile.zipCode}}</h3>
+    <h4>Instruments: {{profile.instruments}}</h4>
+    <h4>Interests: {{profile.interests}}</h5>
+    <h6>Owner: {{profile.owner}}</h6>
+    <h6>ID: {{profile._id}}</h6>
+    <p>About me: {{profile.blurb}}</p>
+    <!-- <p>
+      {{#if profile.review}}
+        {{profile.review}}
+        <form class="update-review-form">
+          <input required type="text" placeholder="title" name="title">
+          <input required type="text" placeholder="content" name="content">
+          <button data-id="{{review.id}}" type="submit">Update-review</button>
+        </form>
+        <button class="delete-review-button">Delete-review</button>
+      {{else}}
+        No reviews yet
+      {{/if}}
+    </p>
+    <form class="create-review-form">
+      <input required type="text" placeholder="title" name="title">
+      <input required type="text" placeholder="content" name="content">
+      <button data-id="{{profile.id}}" type="submit">Write-review</button>
+    </form> -->
+    <button data-id="{{profile._id}}" class="delete-profile-button btn-danger">Delete profile</button>
+  </section>
+
+{{/each}}

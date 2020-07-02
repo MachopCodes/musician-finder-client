@@ -23,9 +23,9 @@ const showProfiles = function (data) {
     data
   })
 }
-const updateProfile = function (data) {
+const updateProfile = function (data, id) {
   return $.ajax({
-    url: config.apiUrl + '/profiles',
+    url: config.apiUrl + '/profiles/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Bearer ' + store.user.token,
@@ -33,14 +33,11 @@ const updateProfile = function (data) {
     data
   })
 }
-const deleteProfile = function (data) {
+const deleteProfile = function (id) {
   return $.ajax({
-    url: config.apiUrl + '/profiles',
+    url: config.apiUrl + '/profiles/' + id,
     method: 'DELETE',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token,
-    },
-    data
+    headers: {Authorization: 'Bearer ' + store.user.token},
   })
 }
 
