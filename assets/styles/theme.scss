@@ -1,5 +1,5 @@
 body {
-  background: darken($info, 25%);
+  background: darken($info, 15%);
   min-height: 100vh;
   padding: 5rem 0 1rem;
 }
@@ -16,29 +16,21 @@ body {
 
 
 main {
-  @include make-container;
-  @include make-container-max-widths;
-
+  max-width: 80%;
+  section:hover {background-color: #AFEEEE;}
   section {
     text-align: center;
-    @include make-col-ready;
-    @include media-breakpoint-up(md) {
-      @include make-col(6);
-    }
-    @include media-breakpoint-up(lg) {
-      @include make-col(12);
-    }
-    background: #66CDAA;
-    border: 1px solid;
-    cursor: pointer;
-    margin: -1px;
-    outline: none;
-    padding: 1rem;
-
-    p {
-      margin-bottom: 0;
-    }
-
+    border: 20px solid blue;
+    border-radius: 180px;
+    margin: auto;
+    background: #F0FFFF;
+    border: 5px solid;
+    margin: 10px;
+    padding: 5rem;
+    font-family: sans-serif;
+    h2 { font-weight: bold; }
+    h4 { font-style: italic; }
+    p { color: grey; }
   }
 
   .content {
@@ -56,8 +48,8 @@ main {
 }
 
 .delete-profile-button {
-  display: flex;
-  justify-content: flex-start;
+  font-size: 1vh;
+  // display: flex;
 }
 
 #message {
@@ -69,20 +61,22 @@ main {
 }
 
 nav {
-  @extend .navbar;
-  @extend .navbar-dark;
-  @extend .bg-dark;
-  @extend .fixed-top;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   .app-name {
     color: #90EE90;
-    @extend .navbar-brand;
-    @extend .h1;
-    margin-bottom: 0;
+    font-size: 50px;
+    display: inline-flex;
+    margin-left: 25px;
+    text-shadow: 1px 1px #FF0000;
   }
 
   .nav-buttons{
-    display: flex;
+    display: inline-flex;
     justify-content: flex-end;
   }
 }

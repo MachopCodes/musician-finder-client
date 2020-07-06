@@ -48,7 +48,7 @@ const signOutSuccess = function() {
 }
 const authFailure = function(response) {
   console.log(response)
-  $('#message').text('Failure')
+  console.log('failed attempt')
   $('form').trigger('reset')
 }
 

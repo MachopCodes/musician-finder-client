@@ -14,41 +14,43 @@
 </head>
 
 <body>
-  <nav>
-    <div class="app-name">MusicMan</div>
-    <div class="nav-buttons">
-      <button id="show-sign-up-button" class="unauth-show btn btn-dark">sign-up</button>
-      <button id="show-sign-in-button" class="unauth-show btn btn-secondary">log-in</button>
-      <form id="sign-in-form" class="unauth sign-in-forms">
-        <input class="sign-in-input" required type="text" placeholder="user name" name="credentials[email]">
-        <input class="sign-in-input" required type="text" placeholder="password" name="credentials[password]">
-        <button id="sign-in-button" class="btn btn-secondary" type="submit">Log In</button>
-      </form>
-      <form id="sign-up-form" class="unauth sign-in-forms">
-        <input required type="text" placeholder="user name" name="credentials[email]">
-        <input required type="text" placeholder="password" name="credentials[password]">
-        <input required type="text" placeholder="confirm password" name="credentials[password_confirmation]">
-        <button id="sign-up-button" class="btn btn-success" type="submit">Sign Up</button>
-      </form>
-      <button id="show-change-pass-button" class="auth btn btn-secondary">
-        change pass</button>
-      <form id="change-password-form" class="auth">
-        <input required type="text" placeholder="old password" name="passwords[old]">
-        <input required type="text" placeholder="new password" name="passwords[new]">
-        <button class="btn btn-secondary" type="submit">change pass</button>
-      </form>
-      <button id="sign-out-button" class="auth btn btn-dark">sign out</button>
+  <nav class=container-flex>
+    <div class=row>
+      <div class="app-name col">MusicMan</div>
+      <div class="nav-buttons col">
+        <button id="show-sign-up-button" class="unauth-show btn btn-dark">sign-up</button>
+        <button id="show-sign-in-button" class="unauth-show btn btn-secondary">log-in</button>
+        <form id="sign-in-form" class="unauth sign-in-forms">
+          <input class="sign-in-input" required type="text" placeholder="user name" name="credentials[email]">
+          <input class="sign-in-input" required type="text" placeholder="password" name="credentials[password]">
+          <button id="sign-in-button" class="btn btn-secondary" type="submit">Log In</button>
+        </form>
+        <form id="sign-up-form" class="unauth sign-in-forms">
+          <input required type="text" placeholder="user name" name="credentials[email]">
+          <input required type="text" placeholder="password" name="credentials[password]">
+          <input required type="text" placeholder="confirm password" name="credentials[password_confirmation]">
+          <button id="sign-up-button" class="btn btn-success" type="submit">Sign Up</button>
+        </form>
+        <button id="show-change-pass-button" class="auth btn btn-secondary">
+          change pass</button>
+        <form id="change-password-form" class="auth">
+          <input required type="text" placeholder="old password" name="passwords[old]">
+          <input required type="text" placeholder="new password" name="passwords[new]">
+          <button class="btn btn-secondary" type="submit">change pass</button>
+        </form>
+        <button id="sign-out-button" class="auth btn btn-dark">sign out</button>
+      </div>
     </div>
   </nav>
   <p id="message"></p>
   <div class="auth profile-buttons">
-    <button id="show-profiles-button" class="btn btn-info">
-      show profiles</button>
+    <button id="index-profiles-button" class="btn btn-info">
+      Search Profiles</button>
     <br>
     <button id="clear-profiles-button" class="btn btn-outline-info">
-      clear profiles</button>
+      Clear Profiles</button>
     <button id="show-create-profiles-button" class="auth btn btn-info">
-      create profile</button>
+      Create Profile</button>
   </div>
 
   <form id="create-profile-form" class="auth container">
@@ -67,7 +69,7 @@
         </select>
       </div class="row">
       <div class="row">
-        <input style="height:200px; font-size: 14pt;" class="col" required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
+        <textarea rows="3" cols="5" placeholder="tell me about yourself :)" name="profile[blurb]" class="col"></textarea>
       </div class="row">
       <div class="row">
         <button type="submit" class="col btn btn-success">
@@ -77,7 +79,7 @@
   </form>
 
   <br>
-  <main class="auth">
+  <main class="auth container">
     <div id="content" class="content"></div>
   </main>
 </body>

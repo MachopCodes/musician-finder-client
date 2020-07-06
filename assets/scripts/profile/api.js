@@ -7,13 +7,18 @@ const createProfile = function (data) {
   return $.ajax({
     url: config.apiUrl + '/profiles',
     method: 'POST',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token,
-    },
+    headers: {Authorization: 'Bearer ' + store.user.token},
     data
   })
 }
-const showProfiles = function (data) {
+const showProfile = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/profiles/' + id,
+    method: 'GET',
+    headers: {Authorization: 'Bearer ' + store.user.token}
+  })
+}
+const indexProfiles = function (data) {
   return $.ajax({
     url: config.apiUrl + '/profiles',
     method: 'GET',
@@ -24,9 +29,7 @@ const updateProfile = function (data, id) {
   return $.ajax({
     url: config.apiUrl + '/profiles/' + id,
     method: 'PATCH',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token,
-    },
+    headers: {Authorization: 'Bearer ' + store.user.token},
     data
   })
 }
@@ -34,13 +37,14 @@ const deleteProfile = function (id) {
   return $.ajax({
     url: config.apiUrl + '/profiles/' + id,
     method: 'DELETE',
-    headers: {Authorization: 'Bearer ' + store.user.token},
+    headers: {Authorization: 'Bearer ' + store.user.token}
   })
 }
 
 module.exports = {
   createProfile,
-  showProfiles,
+  indexProfiles,
+  showProfile,
   updateProfile,
   deleteProfile
 }
