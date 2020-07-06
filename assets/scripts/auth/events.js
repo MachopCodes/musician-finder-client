@@ -23,18 +23,14 @@ const onShowCreateProfile = function(event) {
 }
 const onSignUp = function(form) {
   event.preventDefault()
-  console.log(event)
   let data = getFormFields(event.target)
-  console.log(data)
   api.addUser(data)
     .then(ui.signUpSuccess)
     .catch(ui.authFailure)
 }
 const onSignIn = function(form) {
   event.preventDefault()
-  console.log(event)
   let data = getFormFields(event.target)
-  console.log(data)
   api.signUserIn(data)
     .then(ui.signInSuccess)
     .catch(ui.authFailure)
@@ -53,7 +49,6 @@ const onSignOut = function(event) {
     .then(ui.signOutSuccess)
     .catch(ui.authFailure)
 }
-
 const addHandlers = () => {
   $('#show-change-pass-button').on('click', onShowChangePass)
   $('#show-sign-in-button').on('click', onShowSignIn)

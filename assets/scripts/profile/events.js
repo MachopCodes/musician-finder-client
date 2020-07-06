@@ -49,7 +49,10 @@ const onDeleteProfile = function(event) {
 }
 const onShowUpdate = function(event) {
   event.preventDefault()
-  ui.showUpdate(event)
+  let id = $(event.target).attr('data-id')
+  api.showProfile(id)
+    .then(ui.showUpdateSuccess)
+    .catch(ui.profileFailure)
 }
 const addHandlers = () => {
   $('#create-profile-form').on('submit', onCreateProfile)

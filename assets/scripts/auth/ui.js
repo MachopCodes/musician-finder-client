@@ -9,6 +9,7 @@ const showSignUp = function() {
   $('#sign-up-form').show()
 }
 const showSignIn = function() {
+  $('#message').text('')
   $('#show-sign-in-button').hide()
   $('#sign-in-form').show()
 }
@@ -22,7 +23,7 @@ const showCreateProfiles = function() {
   $('#create-profile-form').show()
 }
 const signUpSuccess = function(response) {
-  console.log('Signed up successfully ' + response.user.email)
+  $('#message').text('Signed up successfully ' + response.user.email)
   $('form').trigger('reset')
 }
 const signInSuccess = function(response) {

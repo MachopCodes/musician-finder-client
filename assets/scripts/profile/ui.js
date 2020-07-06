@@ -26,8 +26,8 @@ const indexProfileSuccess = function(data) {
 }
 const showProfileSuccess = function(data) {
   console.log("profile shown")
-  const indexProfilesHtml = showTemplate({ profile: data.profile})
-    $('.content').html(indexProfilesHtml)
+  const showProfilesHtml = showTemplate({ profile: data.profile})
+    $('.content').html(showProfilesHtml)
     $('#index-profiles-button').hide()
     $('#create-profile-form').hide()
     $('.update-profile-form').hide()
@@ -40,9 +40,15 @@ const clearProfiles = () => {
   $('#index-profiles-button').show()
   $('.update-profile-form').hide()
 }
-const showUpdate = () => {
+const showUpdateSuccess = (response) => {
+  showProfileSuccess(response)
   $('.show-update-button').hide()
   $('.update-profile-form').show()
+  $('.profile-name').val(response.profile.name)
+  $('.profile-contact').val(response.profile.contact)
+  $('.profile-location').val(response.profile.location)
+  $('.profile-instruments').val(response.profile.instruments)
+  $('.profile-blurb').val(response.profile.blurb)
 }
 const updateProfileSuccess = function(response) {
   console.log("Profile updated, this is the response\n", response)
@@ -54,8 +60,8 @@ const updateProfileSuccess = function(response) {
 }
 const deleteProfileSuccess = function(response) {
   console.log("profile deleted\n", response)
-  api.showProfiles()
-    .then(showProfileSuccess)
+  api.indexProfiles()
+    .then(indexProfileSuccess)
     .catch(profileFailure)
 }
 const profileFailure = function(response) {
@@ -68,7 +74,7 @@ module.exports = {
   createProfileSuccess,
   indexProfileSuccess,
   clearProfiles,
-  showUpdate,
+  showUpdateSuccess,
   updateProfileSuccess,
   deleteProfileSuccess
 }
