@@ -1,9 +1,17 @@
 <!-- for each function... books database (from Ajax) as a profile -->
 {{#each profiles as |profile|}}
-<!-- console.log each profile -->
-  {{log profile}}
   <!-- declare a section... data-id (which is like an id that fits in a system) with profile id... (unique id) -->
   <section data-id="{{profile._id}}">
+    <h2>{{profile.instruments}} {{profile.interests}}</h2>
+    <h3>{{profile.name}}, {{profile.location}}</h3>
+    <h4>{{profile.contact}}</h4>
+    <h4>{{profile.owner}}</h4>
+    <p>About me: {{profile.blurb}}</p>
+    <br>
+    <br>
+    {{#if (isequal profile)}}
+    <button data-id="{{profile._id}}" class="owner-buttons delete-profile-button btn-outline-danger">Delete profile</button>
+    <button data-id="{{profile._id}}" type="submit" class="owner-buttons show-update-button btn btn-outline-success">update-profile</button>
     <form class="auth update-profile-form" data-id="{{profile._id}}">
       <fieldset>
         <input class="profile-name" required type="text" placeholder="name" name="profile[name]">
@@ -16,37 +24,28 @@
           <option value="Jams">Jams</option>
         </select>
         <input class="profile-blurb" required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
-        <button type="submit" class="btn btn-success">
-          update-profile</button>
+        <button type="submit" class="btn btn-success">update-profile</button>
       </fieldset>
     </form>
-    <h2>{{profile.instruments}} {{profile.interests}}</h2>
-    <h3>{{profile.name}}, {{profile.location}}</h3>
-    <h4>{{profile.contact}}</h4>
-    <p>About me: {{profile.blurb}}</p>
-    <br>
-    <br>
-    <!-- <p>
-      {{#if profile.review}}
-        {{profile.review}}
-        <form class="update-review-form">
-          <input required type="text" placeholder="title" name="title">
-          <input required type="text" placeholder="content" name="content">
-          <button data-id="{{review.id}}" type="submit">Update-review</button>
-        </form>
-        <button class="delete-review-button">Delete-review</button>
-      {{else}}
-        No reviews yet
-      {{/if}}
-    </p>
-    <form class="create-review-form">
+    {{/if}}
+  </section>
+{{/each}}
+
+<!-- <p>
+  {{#if profile.review}}
+    {{profile.review}}
+    <form class="update-review-form">
       <input required type="text" placeholder="title" name="title">
       <input required type="text" placeholder="content" name="content">
-      <button data-id="{{profile.id}}" type="submit">Write-review</button>
-    </form> -->
-    <button data-id="{{profile._id}}" type="submit" class="show-update-button btn btn-outline-success">
-      update-profile</button>
-    <button data-id="{{profile._id}}" class="delete-profile-button btn-outline-danger">Delete profile</button>
-  </section>
-
-{{/each}}
+      <button data-id="{{review.id}}" type="submit">Update-review</button>
+    </form>
+    <button class="delete-review-button">Delete-review</button>
+  {{else}}
+    No reviews yet
+  {{/if}}
+</p>
+<form class="create-review-form">
+  <input required type="text" placeholder="title" name="title">
+  <input required type="text" placeholder="content" name="content">
+  <button data-id="{{profile.id}}" type="submit">Write-review</button>
+</form> -->

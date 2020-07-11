@@ -1,4 +1,14 @@
   <section data-id="{{profile._id}}">
+    <h2>{{profile.instruments}} {{profile.interests}}</h2>
+    <h3>{{profile.name}}, {{profile.location}}</h3>
+    <h4>{{profile.contact}}</h4>
+    <p>About me: {{profile.blurb}}</p>
+    <br>
+    <br>
+    {{#if (isequal profile)}}
+    <button data-id="{{profile._id}}" type="submit" class="show-update-button btn btn-outline-success">
+      update-profile</button>
+    <button data-id="{{profile._id}}" class="delete-profile-button btn-outline-danger">Delete profile</button>
     <form class="auth update-profile-form" data-id="{{profile._id}}">
       <fieldset>
         <input class="profile-name" required type="text" placeholder="name" name="profile[name]">
@@ -13,33 +23,27 @@
         <input class="profile-blurb" required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
         <button type="submit" class="btn btn-success">
           update-profile</button>
-      </fieldset>
-    </form>
-    <h2>{{profile.instruments}} {{profile.interests}}</h2>
-    <h3>{{profile.name}}, {{profile.location}}</h3>
-    <h4>{{profile.contact}}</h4>
-    <p>About me: {{profile.blurb}}</p>
-    <br>
-    <br>
-    <!-- <p>
-      {{#if profile.review}}
-        {{profile.review}}
-        <form class="update-review-form">
-          <input required type="text" placeholder="title" name="title">
-          <input required type="text" placeholder="content" name="content">
-          <button data-id="{{review.id}}" type="submit">Update-review</button>
-        </form>
-        <button class="delete-review-button">Delete-review</button>
-      {{else}}
-        No reviews yet
-      {{/if}}
-    </p>
-    <form class="create-review-form">
-      <input required type="text" placeholder="title" name="title">
-      <input required type="text" placeholder="content" name="content">
-      <button data-id="{{profile.id}}" type="submit">Write-review</button>
-    </form> -->
-    <button data-id="{{profile._id}}" type="submit" class="show-update-button btn btn-outline-success">
-      update-profile</button>
-    <button data-id="{{profile._id}}" class="delete-profile-button btn-outline-danger">Delete profile</button>
+        </fieldset>
+      </form>
+        {{/if}}
   </section>
+
+
+  <!-- <p>
+  {{#if profile.review}}
+  {{profile.review}}
+  <form class="update-review-form">
+  <input required type="text" placeholder="title" name="title">
+  <input required type="text" placeholder="content" name="content">
+  <button data-id="{{review.id}}" type="submit">Update-review</button>
+</form>
+<button class="delete-review-button">Delete-review</button>
+{{else}}
+No reviews yet
+{{/if}}
+</p>
+<form class="create-review-form">
+<input required type="text" placeholder="title" name="title">
+<input required type="text" placeholder="content" name="content">
+<button data-id="{{profile.id}}" type="submit">Write-review</button>
+</form> -->

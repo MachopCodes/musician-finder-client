@@ -10,3 +10,6 @@ $(() => {
   profileEvents.addHandlers()
   reviewEvents.addHandlers()
 })
+
+
+//on show profiles, if store.id = 

@@ -8,7 +8,6 @@ const store = require('../store')
 const onCreateProfile = function(event) {
   event.preventDefault()
   let data = getFormFields(event.target)
-  console.log(store.user, data)
   api.createProfile(data)
     .then(ui.createProfileSuccess)
     .catch(ui.profileFailure)
@@ -41,7 +40,6 @@ const onUpdateProfile = function(event) {
 }
 const onDeleteProfile = function(event) {
   event.preventDefault()
-  console.log("this is event target in event \n", event.target)
   const id = $(event.target).attr('data-id')
   api.deleteProfile(id)
     .then(ui.deleteProfileSuccess)

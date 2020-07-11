@@ -5,6 +5,7 @@ const events = require('./events')
 const api = require('./api')
 
 const showSignUp = function() {
+  $('#message').text('')
   $('#show-sign-up-button').hide()
   $('#sign-up-form').show()
 }
@@ -27,10 +28,8 @@ const signUpSuccess = function(response) {
   $('form').trigger('reset')
 }
 const signInSuccess = function(response) {
-  console.log(response)
   store.user = response.user
   $('form').trigger('reset')
-  $('#display-show-profiles-button').show()
   $('.auth').show()
   $('.unauth').hide()
   $('#show-sign-up-button').hide()
@@ -46,9 +45,9 @@ const signOutSuccess = function() {
   $('form').trigger('reset')
   $('.auth').hide()
   $('.unauth-show').show()
+  $('.content').empty()
 }
 const authFailure = function(response) {
-  console.log(response)
   $('#message').text('failed attempt')
   $('form').trigger('reset')
 }
