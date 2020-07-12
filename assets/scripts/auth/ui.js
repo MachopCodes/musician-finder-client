@@ -8,11 +8,15 @@ const showSignUp = function() {
   $('#message').text('')
   $('#show-sign-up-button').hide()
   $('#sign-up-form').show()
+  $('#sign-in-form').hide()
+  $('#show-sign-in-button').show()
 }
 const showSignIn = function() {
   $('#message').text('')
   $('#show-sign-in-button').hide()
   $('#sign-in-form').show()
+  $('#sign-up-form').hide()
+  $('#show-sign-up-button').show()
 }
 const showChangePass = function() {
   $('#show-change-pass-button').hide()

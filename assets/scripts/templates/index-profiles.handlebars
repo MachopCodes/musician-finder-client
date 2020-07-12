@@ -10,8 +10,8 @@
     <br>
     <br>
     {{#if (isequal profile)}}
-    <button data-id="{{profile._id}}" class="owner-buttons delete-profile-button btn-outline-danger">Delete profile</button>
-    <button data-id="{{profile._id}}" type="submit" class="owner-buttons show-update-button btn btn-outline-success">update-profile</button>
+    <button data-id="{{profile._id}}" class="fa fa-trash-o btn btn-outline-danger"></button>
+    <button data-id="{{profile._id}}" type="submit" class="owner-buttons fa fa-edit show-update-button btn btn-outline-success"></button>
     <form class="auth update-profile-form" data-id="{{profile._id}}">
       <fieldset>
         <input class="profile-name" required type="text" placeholder="name" name="profile[name]">
@@ -24,7 +24,7 @@
           <option value="Jams">Jams</option>
         </select>
         <input class="profile-blurb" required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
-        <button type="submit" class="btn btn-success">update-profile</button>
+        <button type="submit" class="btn btn-success">save</button>
       </fieldset>
     </form>
     {{/if}}
@@ -49,3 +49,5 @@
   <input required type="text" placeholder="content" name="content">
   <button data-id="{{profile.id}}" type="submit">Write-review</button>
 </form> -->
+
+<!-- class="owner-buttons delete-profile-button btn-outline-danger" -->

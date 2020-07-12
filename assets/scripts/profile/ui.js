@@ -21,6 +21,7 @@ const indexProfileSuccess = function(data) {
   $('#show-create-profiles-button').show()
   $('.content').html(indexProfilesHtml)
   $('.update-profile-form').hide()
+  $('#message').text('')
 }
 const showProfileSuccess = function(data) {
   const showProfilesHtml = showTemplate({ profile: data.profile})
@@ -41,6 +42,7 @@ const showUpdateSuccess = (response) => {
   showProfileSuccess(response)
   $('.show-update-button').hide()
   $('.update-profile-form').show()
+  $('.delete-profile-button').hide()
   $('.profile-name').val(response.profile.name)
   $('.profile-contact').val(response.profile.contact)
   $('.profile-location').val(response.profile.location)

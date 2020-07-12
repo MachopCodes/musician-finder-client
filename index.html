@@ -7,7 +7,7 @@
 
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
@@ -15,8 +15,8 @@
 
 <body>
   <nav class=container-flex>
-    <div class=row>
-      <div class="app-name col">MusicMan</div>
+    <div class="row">
+      <div class="app-name col-2">MusicMan</div>
       <div class="nav-buttons col">
         <button id="show-sign-up-button" class="unauth-show btn btn-dark">sign-up</button>
         <button id="show-sign-in-button" class="unauth-show btn btn-secondary">log-in</button>
@@ -48,7 +48,7 @@
       Search Profiles</button>
     <br>
     <button id="clear-profiles-button" class="btn btn-outline-info">
-      Clear Profiles</button>
+      Home</button>
     <button id="show-create-profiles-button" class="auth btn btn-info">
       Create Profile</button>
   </div>
@@ -57,7 +57,7 @@
     <fieldset>
       <div class="row">
         <input required type="text" placeholder="name" name="profile[name]">
-        <input required type="text" placeholder="contact" name="profile[contact]">
+        <input required type="text" placeholder="contact, name or email" name="profile[contact]">
         <input required type="text" placeholder="location" name="profile[location]">
       </div>
       <div class="row">

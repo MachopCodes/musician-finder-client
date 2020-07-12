@@ -47,10 +47,6 @@ main {
   }
 }
 
-.delete-profile-button {
-  font-size: 5vh;
-  // display: flex;
-}
 
 #message {
   display: flex;
@@ -69,14 +65,15 @@ nav {
 
   .app-name {
     color: #90EE90;
-    font-size: 50px;
+    font-size: 30px;
     display: inline-flex;
-    margin-left: 25px;
+    margin-left: 15px;
     text-shadow: 1px 1px #FF0000;
   }
 
   .nav-buttons{
     display: inline-flex;
     justify-content: flex-end;
+    font-size: 13px;
   }
 }

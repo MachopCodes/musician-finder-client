@@ -8,7 +8,7 @@
     {{#if (isequal profile)}}
     <button data-id="{{profile._id}}" type="submit" class="show-update-button btn btn-outline-success">
       update-profile</button>
-    <button data-id="{{profile._id}}" class="delete-profile-button btn-outline-danger">Delete profile</button>
+    <button data-id="{{profile._id}}" class="delete-profile-button btn-outline-danger">X</button>
     <form class="auth update-profile-form" data-id="{{profile._id}}">
       <fieldset>
         <input class="profile-name" required type="text" placeholder="name" name="profile[name]">
@@ -22,7 +22,7 @@
         </select>
         <input class="profile-blurb" required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
         <button type="submit" class="btn btn-success">
-          update-profile</button>
+          save</button>
         </fieldset>
       </form>
         {{/if}}
