@@ -15,7 +15,8 @@ Create a method to post reviews for other accounts with CRUD functionalities.
 Refactor success messaging 
 Improved Styling, fix sign in / sign up container.
 
-Document your planning and tell a story about your development process and problem-solving strategy.
+Initially planning was building the backend express server. Once the routes were set up and being listened for, front end development began. 
+Scripting was orgainzed into 
 
 
 
