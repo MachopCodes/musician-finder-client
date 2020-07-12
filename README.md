@@ -15,10 +15,8 @@ Create a method to post reviews for other accounts with CRUD functionalities.
 Refactor success messaging 
 Improved Styling, fix sign in / sign up container.
 
-Initially planning was building the backend express server. Once the routes were set up and being listened for, front end development began. 
-Scripting was orgainzed into 
-
-
+Problem Solving flow diagram
+![Problem Solving Flow](https://github.com/MachopCodes/musician-finder-client/blob/master/Problem%20Solving%20Flow.PNG)
 
 User Stories:
 As a user, I want to be able to sign in and sign out 
