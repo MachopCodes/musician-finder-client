@@ -23,7 +23,7 @@
         <form id="sign-in-form" class="unauth sign-in-forms">
           <input class="sign-in-input" required type="text" placeholder="user name" name="credentials[email]">
           <input class="sign-in-input" required type="text" placeholder="password" name="credentials[password]">
-          <button id="sign-in-button" class="btn btn-secondary" type="submit">Log In</button>
+          <button id="sign-in-button" class="btn btn-success" type="submit">Log In</button>
         </form>
         <form id="sign-up-form" class="unauth sign-in-forms">
           <input required type="text" placeholder="user name" name="credentials[email]">
@@ -53,30 +53,32 @@
       Create Profile</button>
   </div>
 
-  <form id="create-profile-form" class="auth container">
-    <fieldset>
-      <div class="row">
-        <input required type="text" placeholder="name" name="profile[name]">
-        <input required type="text" placeholder="contact, phone or email" name="profile[contact]">
-        <input required type="text" placeholder="location" name="profile[location]">
-      </div>
-      <div class="row">
-        <input class="col" required type="text" placeholder="instruments" name="profile[instruments]">
-        <select name="profile[interests]">
-          <option value="Lessons">Lessons</option>
-          <option value="Gigs">Gigs</option>
-          <option value="Jams">Jams</option>
-        </select>
-      </div class="row">
-      <div class="row">
-        <textarea rows="3" cols="5" placeholder="tell me about yourself :)" name="profile[blurb]" class="col"></textarea>
-      </div class="row">
-      <div class="row">
-        <button type="submit" class="col btn btn-success">
-          create profile</button>
-      </div class="row">
-    </fieldset>
-  </form>
+  <section>
+    <form id="create-profile-form" class="auth container">
+      <fieldset>
+        <div class="row">
+          <input required type="text" placeholder="name" name="profile[name]">
+          <input required type="text" placeholder="contact, phone or email" name="profile[contact]">
+          <input required type="text" placeholder="location" name="profile[location]">
+        </div>
+        <div class="row">
+          <input class="col" required type="text" placeholder="instruments" name="profile[instruments]">
+          <select name="profile[interests]">
+            <option value="Lessons">Lessons</option>
+            <option value="Gigs">Gigs</option>
+            <option value="Jams">Jams</option>
+          </select>
+        </div class="row">
+        <div class="row">
+          <textarea rows="3" cols="5" placeholder="tell me about yourself :)" name="profile[blurb]" class="col"></textarea>
+        </div class="row">
+        <div class="row">
+          <button type="submit" class="col btn btn-success">
+            create profile</button>
+        </div class="row">
+      </fieldset>
+    </form>
+  </section>
 
   <br>
   <main class="container">

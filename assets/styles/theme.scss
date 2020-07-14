@@ -17,14 +17,17 @@ body {
 
 main {
   max-width: 80%;
-  section:hover {background-color: #AFEEEE;}
+  section:hover {
+    border: 4px solid;
+    border-color: green;
+  }
   section {
     text-align: center;
     border: 20px solid blue;
     border-radius: 180px;
     margin: auto;
     background: #F0FFFF;
-    border: 5px solid;
+    border: 2px solid;
     margin: 10px;
     padding: 5rem;
     font-family: sans-serif;

@@ -2,13 +2,10 @@
     <h2>{{profile.instruments}} {{profile.interests}}</h2>
     <h3>{{profile.name}}, {{profile.location}}</h3>
     <h4>{{profile.contact}}</h4>
-    <p>About me: {{profile.blurb}}</p>
-    <br>
+    <p>{{profile.blurb}}</p>
     <br>
     {{#if (isequal profile)}}
-    <button data-id="{{profile._id}}" type="submit" class="show-update-button btn btn-outline-success">
-      update-profile</button>
-    <button data-id="{{profile._id}}" class="delete-profile-button btn-outline-danger">X</button>
+    <button data-id="{{profile._id}}" type="submit" class="show-update-button fa fa-edit btn btn-outline-success"></button>
     <form class="auth update-profile-form" data-id="{{profile._id}}">
       <fieldset>
         <input class="profile-name" required type="text" placeholder="name" name="profile[name]">
@@ -20,14 +17,14 @@
           <option value="Gigs">Gigs</option>
           <option value="Jams">Jams</option>
         </select>
-        <input class="profile-blurb" required type="text" placeholder="tell me about yourself :)" name="profile[blurb]">
-        <button type="submit" class="btn btn-success">
-          save</button>
+        <textarea class="profile-blurb" rows="2" cols="100" placeholder="tell me about yourself :)" name="profile[blurb]" class="col"></textarea>
+        <br>
+        <button type="submit" class="btn btn-outline-success fa fa-save"></button>
+        <button data-id="{{profile._id}}" class="fa fa-trash-o btn btn-outline-danger"></button>
         </fieldset>
       </form>
         {{/if}}
   </section>
-
 
   <!-- <p>
   {{#if profile.review}}
