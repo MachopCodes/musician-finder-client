@@ -15,6 +15,7 @@ Create auto sign up, sign in functionality
 **Planning, Development and Problem-Solving Strategy**
 Initial planning included building mongoose models on the server side based on the entity relationship diagram.
 Below is a diagram of how the different files were to interact with each other and create modular programming with the goal of keeping all handling events in app.js, events (after handlers) in events.js, ajax requests in api.js and user interface changes are held in ui.js.
+
 ![Problem Solving Flow](https://github.com/MachopCodes/musician-finder-client/blob/master/Problem%20Solving%20Flow.PNG)
 
 
