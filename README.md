@@ -1,13 +1,17 @@
 Musician Finder is a single-page application with user authentication that allows you to create and view musician profiles which include: name, contact, location, instruments, interests (lessons, gigs or jams) and a blurb about yourself. Search the profiles and if you find a profile that interests you, reach out to that profile using the contact information.
 
-Link to server applicatoin: https://github.com/MachopCodes/musician-finder-server
+**Server Application:** https://github.com/MachopCodes/musician-finder-server
 
-GitHub Page: https://machopcodes.github.io/musician-finder-client/   
+**GitHub Server Repository:** https://machopcodes.github.io/musician-finder-server/   
 
-Production Environment: https://stormy-taiga-24589.herokuapp.com
+**Production Environment:** https://stormy-taiga-24589.herokuapp.com
 
 **Technologies Used:**
-javaScript/CSS/Sass/HTML/Handlebars
+javaScript
+CSS
+Sass
+HTML
+Handlebars
 
 **Unsolved Problems for future iterations:**
 Create a method to search for profiles based on location, instruments and interests.
