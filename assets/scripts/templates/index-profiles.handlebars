@@ -5,13 +5,11 @@
     <h2>{{profile.instruments}} {{profile.interests}}</h2>
     <h3>{{profile.name}}, {{profile.location}}</h3>
     <h4>{{profile.contact}}</h4>
-    <h4>{{profile.owner}}</h4>
     <p>{{profile.blurb}}</p>
     <br>
     <br>
     {{#if (isequal profile)}}
     <button data-id="{{profile._id}}" type="submit" class="owner-buttons fa fa-edit show-update-button btn btn-outline-success"></button>
-    <button data-id="{{profile._id}}" class="fa fa-trash-o btn btn-outline-danger"></button>
     <form class="auth update-profile-form" data-id="{{profile._id}}">
     </form>
     {{/if}}
