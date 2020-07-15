@@ -26,4 +26,5 @@ As a user I want to be able to view other profiles.
 As a user, I don't want any other users to be able to edit or update my information
 
 **Wireframe**
+
 ![wireframe](https://github.com/MachopCodes/musician-finder-client/blob/master/Musician%20Finder%20wireframe.PNG)
