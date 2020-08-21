@@ -2,7 +2,7 @@
 
 **[Deployed Server Application](https://stormy-taiga-24589.herokuapp.com)** |
 **[Server Repository](https://github.com/MachopCodes/musician-finder-server/)** |
-**[Deployed Client Application](https://machopcodes.github.io/musician-finder-client/)**
+**[Deployed Client Application](https://machopcodes.github.io/MusicMan-Client/)**
 
 **Technologies Used:**
 javaScript
