@@ -5,46 +5,46 @@ const api = require('./api')
 const ui = require('./ui')
 const store = require('../store')
 
-const onShowSignUp = function(event) {
-  event.preventDefault()
-  ui.showSignUp(event)
+const onShowSignUp = e => {
+  e.preventDefault()
+  ui.showSignUp()
 }
-const onShowSignIn = function(event) {
-  event.preventDefault(event)
-  ui.showSignIn(event)
+const onShowSignIn = e => {
+  e.preventDefault()
+  ui.showSignIn()
 }
-const onShowChangePass = function(event) {
-  event.preventDefault()
+const onShowChangePass = e => {
+  e.preventDefault()
   ui.showChangePass()
 }
-const onShowCreateProfile = function(event) {
-  event.preventDefault()
+const onShowCreateProfile = e => {
+  e.preventDefault()
   ui.showCreateProfiles()
 }
-const onSignUp = function(form) {
-  event.preventDefault()
-  let data = getFormFields(event.target)
+const onSignUp = e => {
+  e.preventDefault()
+  let data = getFormFields(e.target)
   api.addUser(data)
     .then(ui.signUpSuccess)
     .catch(ui.authFailure)
 }
-const onSignIn = function(form) {
-  event.preventDefault()
-  let data = getFormFields(event.target)
+const onSignIn = e => {
+  e.preventDefault()
+  let data = getFormFields(e.target)
   api.signUserIn(data)
     .then(ui.signInSuccess)
     .catch(ui.authFailure)
 }
-const onChangePassword = function(form) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
+const onChangePassword = e => {
+  e.preventDefault()
+  const data = getFormFields(e.target)
   api.userChangePass(data)
     .then(ui.changeSuccess)
     .catch(ui.authFailure)
 }
-const onSignOut = function(event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
+const onSignOut = e => {
+  e.preventDefault()
+  const data = getFormFields(e.target)
   api.userSignOut(data)
     .then(ui.signOutSuccess)
     .catch(ui.authFailure)

@@ -1,7 +1,8 @@
 body {
-  background: darken($info, 15%);
-  min-height: 100vh;
+  background-image: url('../../home.PNG');
+  background-size: 100px;
   padding: 5rem 0 1rem;
+  background-repeat: repeat;
 }
 
 .profile-buttons {
