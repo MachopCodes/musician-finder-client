@@ -1,0 +1,38 @@
+<!-- for each function... books database (from Ajax) as a profile -->
+{{#each profiles as |profile|}}
+  <!-- declare a section... data-id (which is like an id that fits in a system) with profile id... (unique id) -->
+  <section data-id="{{profile._id}}">
+    <h2>{{profile.instruments}} {{profile.interests}}</h2>
+    <h3>{{profile.name}}, {{profile.location}}</h3>
+    <h4>{{profile.contact}}</h4>
+    <p>{{profile.blurb}}</p>
+    <br>
+    <br>
+    {{#if (isequal profile)}}
+    <button data-id="{{profile._id}}" type="submit" class="owner-buttons fa fa-edit show-update-button btn btn-outline-success"></button>
+    <form class="auth update-profile-form" data-id="{{profile._id}}">
+    </form>
+    {{/if}}
+  </section>
+{{/each}}
+
+<!-- <p>
+  {{#if profile.review}}
+    {{profile.review}}
+    <form class="update-review-form">
+      <input required type="text" placeholder="title" name="title">
+      <input required type="text" placeholder="content" name="content">
+      <button data-id="{{review.id}}" type="submit">Update-review</button>
+    </form>
+    <button class="delete-review-button">Delete-review</button>
+  {{else}}
+    No reviews yet
+  {{/if}}
+</p>
+<form class="create-review-form">
+  <input required type="text" placeholder="title" name="title">
+  <input required type="text" placeholder="content" name="content">
+  <button data-id="{{profile.id}}" type="submit">Write-review</button>
+</form> -->
+
+<!-- class="owner-buttons delete-profile-button btn-outline-danger" -->

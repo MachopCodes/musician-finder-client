@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Music Man</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <nav class=container-flex>
+    <div class="row">
+      <div class="navbar-brand app-name col-2">MusicMan</div>
+      <div class="nav-buttons col">,
+        <button id="show-sign-up-button" class="unauth-show btn btn-dark">sign-up</button>
+        <button id="show-sign-in-button" class="unauth-show btn btn-secondary">log-in</button>
+        <form id="sign-in-form" class="unauth sign-in-forms">
+          <input class="sign-in-input" required type="text" placeholder="user name" name="credentials[email]">
+          <input class="sign-in-input" required type="text" placeholder="password" name="credentials[password]">
+          <button id="sign-in-button" class="btn btn-success" type="submit">Log In</button>
+        </form>
+        <form id="sign-up-form" class="unauth sign-in-forms">
+          <input required type="text" placeholder="user name" name="credentials[email]">
+          <input required type="text" placeholder="password" name="credentials[password]">
+          <input required type="text" placeholder="confirm password" name="credentials[password_confirmation]">
+          <button id="sign-up-button" class="btn btn-success" type="submit">Sign Up</button>
+        </form>
+        <button id="show-change-pass-button" class="auth btn btn-secondary">
+          change pass</button>
+        <form id="change-password-form" class="auth">
+          <input required type="text" placeholder="old password" name="passwords[old]">
+          <input required type="text" placeholder="new password" name="passwords[new]">
+          <button class="btn btn-secondary" type="submit">change pass</button>
+        </form>
+        <button id="sign-out-button" class="auth btn btn-dark">sign out</button>
+      </div>
+    </div>
+  </nav>
+  <p id="message"></p>
+  <div class="auth profile-buttons">
+    <button id="index-profiles-button" class="auth btn btn-info">
+      Search Profiles</button>
+    <br>
+    <button id="clear-profiles-button" class="btn btn-outline-info">
+      Home</button>
+    <button id="show-create-profiles-button" class="auth btn btn-info">
+      Create Profile</button>
+  </div>
+  <section>
+    <form id="create-profile-form" class="auth container">
+      <fieldset>
+        <div class="row">
+          <input required type="text" placeholder="name" name="profile[name]">
+          <input required type="text" placeholder="contact, phone or email" name="profile[contact]">
+          <input required type="text" placeholder="location" name="profile[location]">
+        </div>
+        <div class="row">
+          <input class="col" required type="text" placeholder="instruments" name="profile[instruments]">
+          <select name="profile[interests]">
+            <option value="Lessons">Lessons</option>
+            <option value="Gigs">Gigs</option>
+            <option value="Jams">Jams</option>
+          </select>
+        </div class="row">
+        <div class="row">
+          <textarea rows="3" cols="5" placeholder="tell me about yourself :)" name="profile[blurb]" class="col"></textarea>
+        </div class="row">
+        <div class="row">
+          <button type="submit" class="col btn btn-success">
+            create profile</button>
+        </div class="row">
+      </fieldset>
+    </form>
+  </section>
+  <br>
+  <main class="container">
+    <div id="content" class="content"></div>
+  </main>
+</body>
+
+</html>
